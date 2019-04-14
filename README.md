@@ -1,4 +1,4 @@
-# Weather ForeCast App using React
+# Weather ForeCast App build with ReactNative
 
 <br />
 #### Introduction
@@ -16,3 +16,10 @@ You can also clone this repository to your computer by pasting
 - `npm test` (to ensure the app is successfully passing tests and linting)
 - `react-native run-android` (this serves the app  run on android)
 - `react-native run-ios` (this serves the app  run on android)
+
+HomeScreen
+
+![alt text](https://github.com/priyangamani/WeatherForeCastApp/blob/master/screenshots/HomeScreen.jpg)
+
+DetailScreen
+![alt text](https://github.com/priyangamani/WeatherForeCastApp/blob/master/screenshots/DetailScreen.jpg)
