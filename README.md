@@ -15,7 +15,7 @@ You can also clone this repository to your computer by pasting
 - `npm install` (this will install the dependencies)
 - `npm test` (to ensure the app is successfully passing tests and linting)
 - `react-native run-android` (this serves the app  run on android)
-- `react-native run-ios` (this serves the app  run on android)
+- `react-native run-ios` (this serves the app  run on ios)
 
 HomeScreen
 
