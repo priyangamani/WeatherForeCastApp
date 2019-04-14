@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { View, Text, StyleSheet,ScrollView,
-  Image} from 'react-native'
+  Image,ImageBackground} from 'react-native'
 import { connect } from 'react-redux'
 import { fetchWeatherInfo } from '../actions'
 import { Card, ListItem} from 'react-native-elements'
@@ -10,6 +10,7 @@ import { StackActions, NavigationActions } from 'react-navigation';
 
 
 const images = {
+  backgroundImg: require('images/backgroundImg.jpg'),
   cloudy: require('images/cloudy.png'),
   partialcloud: require('images/partialcloud.png'),
   rain: require('images/rain.png'),
@@ -42,6 +43,7 @@ class DetailScreen extends React.Component {
     render() {
         const {getWeatherList} = this.props;
         return (
+       <ImageBackground source={images.backgroundImg} style={styles.backgroundImage}>
         <ScrollView>
         <Card >
       {
@@ -65,6 +67,7 @@ class DetailScreen extends React.Component {
       }
        </Card>
       </ScrollView>
+      </ImageBackground>
       );
     }  
   }
@@ -77,19 +80,6 @@ class DetailScreen extends React.Component {
     text: {
       textAlign: 'center',
       fontSize:20,
-    },
-    button: {
-      height: 60,
-      margin: 10,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#0b7eff'
-    },
-    buttonText: {
-      color: 'white'
-    },
-    mainContent: {
-      margin: 10,
     },
     backgroundImage: {
       flex: 1,

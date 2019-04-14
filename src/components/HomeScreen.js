@@ -175,16 +175,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize:20,
   },
-  button: {
-    height: 60,
-    margin: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#0b7eff'
-  },
-  buttonText: {
-    color: 'white'
-  },
   mainContent: {
     margin: 10,
   },
