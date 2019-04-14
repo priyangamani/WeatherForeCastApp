@@ -19,11 +19,12 @@ class DetailScreen extends React.Component {
 
   static navigationOptions = ({ navigation }) => {
     return {
+      headerTitle: 'Hourly Weather Forecast',
       headerLeft: (
         <Icon
         name="arrow-left"
         size={25}
-        marginLeft={10}
+        marginLeft={20}
         backgroundColor="#3b5998"
         onPress={() => {
               navigation.dispatch(StackActions.reset({
@@ -43,7 +44,6 @@ class DetailScreen extends React.Component {
         return (
         <ScrollView>
         <Card >
-        <Text style={styles.text}>Hourly Weather Forecast</Text>
       {
         getWeatherList.hourly.data.map((item, i) => {
           return (

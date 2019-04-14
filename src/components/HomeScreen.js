@@ -7,7 +7,7 @@ import { Card, ListItem} from 'react-native-elements'
 import PropTypes from 'prop-types';
 import moment from "moment";
 import { Grid,LineChart,YAxis} from 'react-native-svg-charts'
-import { createAppContainer, createStackNavigator, StackActions, NavigationActions } from 'react-navigation'; 
+import { StackActions, NavigationActions } from 'react-navigation'; 
 
 
 const images = {
@@ -19,9 +19,7 @@ const images = {
 
 
  class Home extends Component {
-  constructor() {
-    super();
-  }
+  
 
   componentDidMount(){
     this.props.fetchWeatherInfo();
@@ -84,7 +82,7 @@ renderChartComponent = () =>{
   return(
     <Card>
     <Text style={styles.text}>Hourly Weather Forecast</Text>
-    <View style={{ height: 200, flexDirection: 'row' }}>
+    <View style={styles.chartView}>
               <YAxis
                   data={ composedValues }
                   contentInset={ contentInset }
@@ -219,6 +217,10 @@ const styles = StyleSheet.create({
     marginLeft:10,
     fontSize:40
   },
+  chartView:{
+    height: 200, 
+    flexDirection: 'row'
+  }
 })
 
 Home.propTypes = {
